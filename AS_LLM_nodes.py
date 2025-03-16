@@ -117,13 +117,13 @@ class AS_GeminiCaptioning:
             "Neutral-toned stone panels, tinted glass curtain walls, brushed metal railings, integrated with lush landscaping, "
             "manicured hedges, ornamental grasses, sculptural trees, wooden pathway leading to a reflective metal sphere, "
             "Secluded urban oasis, tranquil environment, free from city noise, surrounded by curated greenery, "
-            "creating a serene and balanced atmosphere. Soft diffused lighting, overcast sky, early morning mist, "
+            "a serene and balanced atmosphere, Soft diffused lighting, overcast sky, early morning mist, "
             "gentle atmospheric glow, cinematic wide-angle perspective, symmetrical framing, high dynamic range, "
             "RAW photo, hyper-detailed, photorealistic"
         )
         FLUX_type = (
             "Architecture, high-end modernist residential complex surrounded by lush greenery, designed with a minimalist "
-            "and elegant aesthetic. The buildings feature a combination of natural stone and glass façades, "
+            "and elegant aesthetic. The buildings feature a combination of natural stone and glass façades "
             "with subtle architectural details and open balconies, "
             "A linear yet dynamic composition with clean geometric volumes, softened by carefully curated landscaping, "
             "including hedges, ornamental grasses, and small trees. The façade combines smooth concrete panels "
