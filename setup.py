@@ -1,16 +1,18 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="AS_GeminiCaptioning",
-    version="1.0.2",
-    description="A ComfyUI node that combines an image with simple text parameters to create a prompt, sends it to the Google Gemini API via the google-generativeai SDK, and returns the generated text response along with the original prompt and an execution log",
+    name="AS_LLM_nodes",
+    version="2.0.0",
+    description="A ComfyUI extension providing Gemini and ChatGPT integration via custom nodes.",
+    author="Artem Svetozarov",
     author_email="art.svetozarov@gmail.com",
-    url="https://github.com/svetozarov/AS_GeminiCaptioning", 
+    url="https://github.com/svetozarov/AS_LLM_nodes",
     packages=find_packages(),
     install_requires=[
         "Pillow",
         "requests",
-        "google-generativeai"
+        "google-generativeai",
+        "openai"
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
