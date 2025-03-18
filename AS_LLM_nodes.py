@@ -111,32 +111,11 @@ class AS_GeminiCaptioning:
 
         # Sample reference texts for SD1.5 – SDXL or FLUX
         SDXL_type = (
-            "Architecture, high-end modernist residential complex, minimalist design, open balconies, "
-            "subtle architectural details, concrete and glass façades, elegant geometric volumes, tiered rooftop terraces, "
-            "panoramic floor-to-ceiling windows, "
-            "Neutral-toned stone panels, tinted glass curtain walls, brushed metal railings, integrated with lush landscaping, "
-            "manicured hedges, ornamental grasses, sculptural trees, wooden pathway leading to a reflective metal sphere, "
-            "Secluded urban oasis, tranquil environment, free from city noise, surrounded by curated greenery, "
-            "a serene and balanced atmosphere, Soft diffused lighting, overcast sky, early morning mist, "
-            "gentle atmospheric glow, cinematic wide-angle perspective, symmetrical framing, high dynamic range, "
-            "RAW photo, hyper-detailed, photorealistic"
-        )
+                    "It should be in CLIP-L comma-separated keywords SDXL prompt style: “Architecture, high-end modernist residential complex, minimalist design, open balconies, subtle architectural details, concrete and glass façades, elegant geometric volumes, tiered rooftop terraces, panoramic floor-to-ceiling windows, neutral-toned stone panels, tinted glass curtain walls, brushed metal railings, integrated with lush landscaping, manicured hedges, ornamental grasses, sculptural trees, wooden pathway leading to a reflective metal sphere, secluded urban oasis, tranquil environment, free from city noise, surrounded by curated greenery, creating a serene and balanced atmosphere, soft diffused lighting, overcast sky, early morning mist, gentle atmospheric glow, cinematic wide-angle perspective, symmetrical framing, high dynamic range, RAW photo, hyper-detailed, photorealistic”"
+                )
         FLUX_type = (
-            "Architecture, high-end modernist residential complex surrounded by lush greenery, designed with a minimalist "
-            "and elegant aesthetic. The buildings feature a combination of natural stone and glass façades "
-            "with subtle architectural details and open balconies, "
-            "A linear yet dynamic composition with clean geometric volumes, softened by carefully curated landscaping, "
-            "including hedges, ornamental grasses, and small trees. The façade combines smooth concrete panels "
-            "with floor-to-ceiling tinted glass windows, creating a refined balance of opacity and transparency, "
-            "The outdoor space is defined by a wooden pathway meandering through a meticulously designed garden, "
-            "leading towards a focal point—a polished metal sphere sculpture. Strategic lighting elements subtly highlight "
-            "the landscape, while the gentle play of reflections on the glass surfaces enhances the depth of the environment,"
-            "Set in a tranquil urban enclave, free from visual noise, framed by an overcast sky that casts a soft, diffused glow "
-            "over the buildings. Early morning atmosphere with slight fog in the distance, lending an ethereal and cinematic quality "
-            "to the scene, "
-            "RAW photo, slightly elevated wide-angle viewpoint, long exposure, cinematic framing, balanced symmetry, moderate "
-            "depth of field, high dynamic range, hyper-detailed, photorealistic rendering."
-        )
+                    "It should be in CLIP-G natural language FLUX prompt style: “Architecture, high-end modernist residential complex surrounded by lush greenery, designed with a minimalist and elegant aesthetic. The buildings feature a combination of natural stone and glass façades, with subtle architectural details and open balconies. A linear yet dynamic composition with clean geometric volumes, softened by carefully curated landscaping, including hedges, ornamental grasses, and small trees. The façade combines smooth concrete panels with floor-to-ceiling tinted glass windows, creating a refined balance of opacity and transparency. The outdoor space is defined by a wooden pathway meandering through a meticulously designed garden, leading towards a focal point—a polished metal sphere sculpture. Strategic lighting elements subtly highlight the landscape, while the gentle play of reflections on the glass surfaces enhances the depth of the environment. Set in a tranquil urban enclave, free from visual noise, framed by an overcast sky that casts a soft, diffused glow over the buildings. Early morning atmosphere with slight fog in the distance, lending an ethereal and cinematic quality to the scene. RAW photo, slightly elevated wide-angle viewpoint, long exposure, cinematic framing, balanced symmetry, moderate depth of field, high dynamic range, hyper-detailed, photorealistic rendering.”"
+                )
 
         blocks = []
         blocks.append(
@@ -167,7 +146,7 @@ class AS_GeminiCaptioning:
         if emphasis.strip():
             blocks.append("In the prompt, emphasize: " + emphasis.strip())
         if isinstance(prompt_length, int) and prompt_length > 0:
-            blocks.append(f"The approximate number of words in the prompt should be: {prompt_length}")
+            blocks.append(f"The approximate number of words in the prompt should be as close as possible to 50 {prompt_length}")
 
         prompt_text = "\n".join(blocks)
         log.append("Constructed prompt text successfully.")
