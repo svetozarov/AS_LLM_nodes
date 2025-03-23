@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="AS_LLM_nodes",
-    version="1.0.0",
+    version="1.0.1",
     description="A ComfyUI extension providing Gemini and ChatGPT integration via custom nodes.",
     author="Artem Svetozarov",
     author_email="art.svetozarov@gmail.com",
