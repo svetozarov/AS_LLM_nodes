@@ -1,0 +1,20 @@
+[project]
+name = "AS_LLM_nodes"
+description = "This ComfyUI extension provides custom nodes for working with Google Gemini and OpenAI ChatGPT."
+version = "2.1.1"
+license = { file = "LICENSE" }
+dependencies = [
+    "Pillow",
+    "requests",
+    "google-generativeai",
+    "openai"
+]
+
+[project.urls]
+Repository = "https://github.com/svetozarov/AS_LLM_nodes"
+# Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = "svetozarov"
+DisplayName = "AS_LLM_nodes"
+Icon = ""
