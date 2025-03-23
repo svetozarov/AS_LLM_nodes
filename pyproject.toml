@@ -1,7 +1,7 @@
 [project]
 name = "AS_LLM_nodes"
 description = "This ComfyUI extension provides custom nodes for working with Google Gemini and OpenAI ChatGPT."
-version = "1.0.01"
+version = "1.0.1"
 license = { file = "LICENSE" }
 dependencies = [
     "Pillow",
